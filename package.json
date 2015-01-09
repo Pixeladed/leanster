@@ -1,0 +1,20 @@
+{
+  "name": "LeanCanvas",
+  "version": "1.0.0",
+  "description": "Collaborative lean canvas creator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "collaborate",
+    "lean",
+    "canvas"
+  ],
+  "author": "Pixeladed",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.6",
+    "socket.io": "^1.2.1"
+  }
+}

@@ -1,0 +1,296 @@
+body {
+	overflow: hidden;
+	height: 100%;
+}
+.hidden {
+	display: none;
+}
+div#overlay {
+	height: 100vh;
+	position: absolute;
+	background: rgba(100,100,100,.75);
+	z-index: 50;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+	display: none;
+	opacity: 0;
+}
+div.view {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+div.action-button {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 100%;
+	background: url('../assets/share.png') no-repeat center #00C853;
+	-webkit-box-shadow: 0 5px 5px #B0BEC5;
+	box-shadow: 0 5px 5px #B0BEC5;
+	cursor: pointer;
+}
+div.view#greetview {
+	background: #f5f5f5;
+	text-align: center;
+	z-index: 100;
+}
+div.view#editorview {
+	background: #f7f7f7;
+	width: 90%;
+	height: 90vh;
+	margin-left: 5%;
+	margin-top: 5vh;
+	z-index: -1;
+	opacity: 0;
+}
+div.view#greetview div#title-wrap {
+	position: relative;
+	margin-top: 30vh;
+}
+div.view#greetview div#button-wrap button {
+	position: relative;
+	margin-top: 3vh;
+	height: 40px;
+}
+div.view#greetview div#title-wrap h5.row {
+	font-size: 2rem;
+}
+div.view#editorview h3.canvas-title {
+	position: absolute;
+	width: 70%;
+	margin-left: 15%;
+	text-align: center;
+	padding-top: 7px;
+	cursor: pointer;
+}
+div.view#editorview h3.canvas-title:hover {
+	color: #F2484E;
+}
+div.view#editorview div.canvas {
+	width: 100%;
+	height: 90vh;
+	margin-left: 0%;
+	margin-top: 10vh;
+}
+div.view#editorview div.canvas div.row {
+	border-top: 1px solid black;
+}
+div.view#editorview div.canvas div.PSUU-wrapper
+,div.view#editorview div.canvas div.PSUU-wrapper div.columns {
+	height: 40vh;
+}
+div.view#editorview div.canvas div.CKC-wrapper
+,div.view#editorview div.canvas div.CR-wrapper
+,div.view#editorview div.canvas div.CKC-wrapper div.columns
+,div.view#editorview div.canvas div.CR-wrapper div.columns {
+	height: 25vh;
+}
+div.view#editorview div.canvas div.row div.columns {
+	border-right: 1px solid black;
+}
+div.view#editorview div.canvas div.row div.columns h6.columns-title {
+	font-size: 1.5rem;
+	color: #333;
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	margin-left: -15px;
+	margin-top: 10px;
+}
+div.view#editorview div.canvas div.row div.columns h6.columns-title span {
+	display: inline-block;
+	margin-left: 1%;
+	margin-top: -1px;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: url('../assets/add.png') no-repeat center;
+	-webkit-background-size: 80%;
+	background-size: 65%;
+	color: #F2484E;
+	cursor: pointer;
+}
+div.view#editorview div.canvas div.PSUU-wrapper div.columns#problem h6.columns-title
+,div.view#editorview div.canvas div.PSUU-wrapper div.columns#problem ul {
+	margin-left: 20px;
+}
+div.view#editorview div.canvas div.CKC-wrapper div.columns#customer h6.columns-title
+,div.view#editorview div.canvas div.CKC-wrapper div.columns#customer ul {
+	margin-left: 20px;
+}
+div.view#editorview div.canvas div.CR-wrapper div.columns#cost h6.columns-title
+,div.view#editorview div.canvas div.CR-wrapper div.columns#cost ul {
+	margin-left: 20px;
+}
+div.view#editorview div.canvas div.row div.columns ul {
+	width: 90%;
+	height: 18vh;
+	overflow: auto;
+	margin-top: 5vh;
+	margin-left: -15px;
+	padding-top: 15px;
+}
+div.view#editorview div.canvas div.PSUU-wrapper div.columns ul.columns-content {
+	height: 30vh;
+}
+div.modal {
+	display: none;
+	width: 50%;
+	height: 55vh;
+	margin-left: 25%;
+	top: -1000px;
+	position: absolute;
+	background: #f5f5f5;
+	z-index: 800;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+div.modal h5 {
+	width: 100%;
+	height: 10vh;
+	background: #e5e5e5;
+	line-height: 10vh;
+	text-align: center;
+}
+div.modal label {
+	margin-left: 10%;
+}
+div.modal textarea {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 2vh;
+	resize: none;
+}
+div.modal input[type="submit"] {
+	position: absolute;
+	right: 10%;
+	bottom: 2vh;
+}
+div.modal ul#itemColor {
+	width: 80%;
+	height: 10vh;
+	margin-left: 10%;
+	margin-top: 1vh;
+	text-align: center;
+}
+div.modal ul#itemColor li.itemColorOpt {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	border: 10px solid #f5f5f5;
+	cursor: pointer;
+}
+div.modal ul#itemColor li.itemColorOpt.selected {
+	border: 10px solid #e7e7e7;
+}
+div.modal li.itemColorOpt.red {
+	background: #F64747;
+}
+div.modal li.itemColorOpt.blue {
+	background: #3498DB;
+}
+div.modal li.itemColorOpt.green {
+	background: #2ECC71;
+}
+div.modal li.itemColorOpt.yellow {
+	background: #F9BF3B;
+}
+div.modal  li.itemColorOpt.black {
+	background: #22313F;
+}
+ul.columns-content li.itemColorOpt.red {
+	color: #F64747;
+}
+ul.columns-content li.itemColorOpt.blue {
+	color: #3498DB;
+}
+ul.columns-content li.itemColorOpt.green {
+	color: #2ECC71;
+}
+ul.columns-content li.itemColorOpt.yellow {
+	color: #F9BF3B;
+}
+ul.columns-content li.itemColorOpt.black {
+	color: #22313F;
+}
+div.modal ul#itemColor li.itemColorOpt:hover {
+	border: 10px solid #e7e7e7;
+}
+.itemEdit
+,.itemDelete {
+	color: #dbdbdb;
+	float: right;
+	padding-right: 5px;
+	padding-left: 5px;
+	display: block;
+	cursor: pointer;
+}
+.itemDelete {
+	margin-left: 3px;
+}
+.itemEdit:hover
+,.itemDelete:hover {
+	background: #dbdbdb;
+	color: #fff;
+}
+div.modal p.shareP {
+	position: absolute;
+	width: 90%;
+	height: 5vh;
+	line-height: 5vh;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 2vh;
+	font-size: 1.25em;
+}
+div.modal a.shareURL {
+	display: inline-block;
+	width: 90%;
+	margin-left: 10%;
+	margin-top: 10vh;
+	font-size: 1.85rem;
+}
+div.modal button {
+	display: inline-block;
+	border: 1px solid #f5f5f5;
+	float:right;
+	margin-right: 10%;
+}
+div.modal p.des {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 2vh;
+}
+button#export {
+	float: right;
+	display: inline-block;
+	margin-top: 2vh;
+	margin-right: 3%;
+	border: none;
+	color: #288dff;
+	width: 15%;
+	font-size: 70%;
+	padding: 0 10px 5px 10px;
+}
+@media (max-width: 550px) {
+	body {
+		overflow: scroll;
+	}
+	.view {
+		height: 100%;
+	}
+	div.view#editorview div.canvas div.row div.columns h6.columns-title {
+		margin-left: 20px;
+	}
+}

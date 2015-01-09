@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leanster</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/saver.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/lean.js"></script>
+		<script type="text/javascript" src="js/interaction.js"></script>
+		<script type="text/javascript" src="js/collab.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="css/core.css">
+	</head>
+	<body>
+		<div id="overlay" class="u-full-width"></div>
+		<div class="view" id="greetview">
+			<div id="title-wrap" class="twelve columns">
+				<h1>Leanster</h1>
+				<h5>Collaborative lean canvas creator</h5>
+			</div>
+			<div id="button-wrap">
+				<button id="create" class="button">New canvas</button>
+				<button id="upload" class="button">Upload created canvas</button>
+			</div>
+		</div>
+		<div class="view" id="editorview">
+			<h3 class="canvas-title">New canvas</h3>
+			<button id="export">export to file</button>
+			<div class="canvas">
+				<div class="PSUU-wrapper row">
+					<div id="problem" class="three columns">
+						<h6 class="columns-title">Problems<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="solution" class="three columns">
+						<h6 class="columns-title">Solutions<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="unique" class="three columns">
+						<h6 class="columns-title">Unique Value Proposition<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="unfair" class="three columns">
+						<h6 class="columns-title">Unfair Advantage<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+				</div>
+				<div class="CKC-wrapper row">
+					<div id="customer" class="four columns">
+						<h6 class="columns-title">Customer Segments<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="key" class="four columns">
+						<h6 class="columns-title">Key Metrics<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="channel" class="four columns">
+						<h6 class="columns-title">Channels<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+				</div>
+				<div class="CR-wrapper row">
+					<div id="cost" class="six columns">
+						<h6 class="columns-title">Cost Structure<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+					<div id="revenue" class="six columns">
+						<h6 class="columns-title">Revenue Streams<span></span></h6>
+						<ul class="columns-content"></ul>
+					</div>
+				</div>
+			</div>
+			<div class="action-button" id="share"></div>
+		</div>
+		<div class="modal"></div>
+		<div class="hidden" id="modalInput">
+			<h5>Unique Value Proposition</h5>
+			<label for="itemContent">Content: </label>
+			<textarea name="itemContent" id="itemContent" cols="30" rows="10"></textarea>
+			<ul id="itemColor">
+				<li class="itemColorOpt red">
+					<span class="hidden">red</span>
+				</li>
+				<li class="itemColorOpt blue">
+					<span class="hidden">blue</span>
+				</li>
+				<li class="itemColorOpt green">
+					<span class="hidden">green</span>
+				</li>
+				<li class="itemColorOpt yellow">
+					<span class="hidden">yellow</span>
+				</li>
+				<li class="itemColorOpt black selected">
+					<span class="hidden">black</span>
+				</li>
+			</ul>
+			<input type="submit" value="Add" class="button-primary" id="itemSubmit">
+		</div>
+		<div class="hidden" id="modalShare">
+			<h5>Share canvas</h5>
+			<p class="shareP">Share this URL:</p>
+			<a href="" class="shareURL"><span class="replace"></span><button>copy &#9166</button></a>
+			<p class="des">Anyone with this link is able to edit this canvas in real time. If you want to save this canvas to work with later, you can click export to file (top right). Later, you can click upload created canvas to continue editing.</p>
+		</div>
+		<div class="utility hidden">
+			<input type="file" class="hidden" id="uploadInput">
+		</div>
+	</body>
+</html>
