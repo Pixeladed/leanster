@@ -1,6 +1,6 @@
 $(document).ready(function() {	
 
-	var root = "http://0.0.0.0:8080/";
+	var root = "http://leanster.herokuapp.com";
 	var socket = io.connect(root);
 	var UUID,room,CANVAS;
 

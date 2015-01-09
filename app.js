@@ -9,8 +9,8 @@ console.log('[debug] finished init');
 app.use(express.static(__dirname + '/public'));
 
 //LISTEN
-server.listen(8080);
-console.log('[debug] listening on port 8080');
+server.listen(process.env.PORT);
+console.log('[debug] listening on port '+process.env.PORT);
 
 //ROUTE
 app.get('/:id', function(req,res,next) {
