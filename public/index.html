@@ -2,12 +2,6 @@
 <html>
 	<head>
 		<title>Leanster</title>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/saver.js"></script>
-		<script src="/socket.io/socket.io.js"></script>
-		<script type="text/javascript" src="js/lean.js"></script>
-		<script type="text/javascript" src="js/interaction.js"></script>
-		<script type="text/javascript" src="js/collab.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/core.css">
@@ -100,11 +94,17 @@
 		<div class="hidden" id="modalShare">
 			<h5>Share canvas</h5>
 			<p class="shareP">Share this URL:</p>
-			<a href="" class="shareURL"><span class="replace"></span><button>copy &#9166</button></a>
+			<a href="" class="shareURL"><span class="replace"></span><button>CMD + C &#9166</button></a>
 			<p class="des">Anyone with this link is able to edit this canvas in real time. If you want to save this canvas to work with later, you can click export to file (top right). Later, you can click upload created canvas to continue editing.</p>
 		</div>
 		<div class="utility hidden">
 			<input type="file" class="hidden" id="uploadInput">
 		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/saver.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/lean.js"></script>
+		<script type="text/javascript" src="js/interaction.js"></script>
+		<script type="text/javascript" src="js/collab.js"></script>
 	</body>
 </html>

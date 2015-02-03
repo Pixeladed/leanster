@@ -9,8 +9,9 @@ console.log('[debug] finished init');
 app.use(express.static(__dirname + '/public'));
 
 //LISTEN
-server.listen(process.env.PORT);
-console.log('[debug] listening on port '+process.env.PORT);
+var port = process.env.PORT || 3000;
+server.listen(port);
+console.log('[debug] listening on port '+port);
 
 //ROUTE
 app.get('/:id', function(req,res,next) {
@@ -29,6 +30,7 @@ function uuid(len) {
 	return identifier;
 }
 
+// Sockets
 io.on('connection', function(socket) {
 	//Wait for client to init and see if they're joining or creating
 	socket.on('CLIENT_INIT',function(data) {
