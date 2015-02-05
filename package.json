@@ -4,7 +4,7 @@
   "description": "Collaborative lean canvas creator",
   "main": "app.js",
   "scripts": {
-    "test": "node ./test/autopass.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
