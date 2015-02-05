@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	//Lean global api
 	var Lean = {
 		model: {
 			canvas: function(name) {
