@@ -3,6 +3,7 @@ var express = require("express");
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var clientCount = 0;
 console.log('[debug] finished init');
 
 //STATIC
@@ -32,6 +33,14 @@ function uuid(len) {
 
 // Sockets
 io.on('connection', function(socket) {
+	clientCount++;
+	console.log("Client count: "+clientCount);
+
+	socket.on("disconnect", function() {
+		clientCount--;
+		console.log("Client count: "+clientCount);
+	})
+
 	//Wait for client to init and see if they're joining or creating
 	socket.on('CLIENT_INIT',function(data) {
 		if (!data.created) {
@@ -57,4 +66,3 @@ io.on('connection', function(socket) {
 	});
 
 });
-
