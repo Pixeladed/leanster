@@ -20,6 +20,8 @@ app.get('/:id', function(req,res,next) {
 	res.sendFile(__dirname + '/public/index.html');
 });
 
+module.exports = app;
+
 //COLAB
 function uuid(len) {
 	var size = (len) ? len : 5;

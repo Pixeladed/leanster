@@ -61,7 +61,6 @@ $(document).ready(function() {
 		socket.emit("CLIENT_INIT",{created:true,uuid: UUID});
 		console.log('Connected to server. UUID: '+UUID);
 
-		// $('#create').trigger("click");
 		$('#create')[0].click();
 		console.log("emit client request");
 		socket.emit(UUID+"/CLIENT_REQUEST",{uuid: UUID});

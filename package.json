@@ -4,7 +4,7 @@
   "description": "Collaborative lean canvas creator",
   "main": "app.js",
   "scripts": {
-    "test": "node ./tests/autopass.js"
+    "test": "node ./test/autopass.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "dependencies": {
     "express": "4.10.6",
     "socket.io": "1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "2.1.0",
+    "supertest": "^0.15.0"
   }
 }
