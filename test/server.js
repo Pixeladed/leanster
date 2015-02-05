@@ -16,7 +16,7 @@ describe("Leanster", function() {
 		describe("GET /:id", function() {
 			it("should return homepage",function(done) {
 				request(app)
-					.get("/")
+					.get("/hs8ak")
 					.set("Accept","text/html")
 					.expect(200,done);
 			});
